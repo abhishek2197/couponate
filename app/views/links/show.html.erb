@@ -1,10 +1,10 @@
 <div class="page-header">
-  <h1><a href="<%= @link.url %>"><%= @link.title %></a><br> <small>Submitted by <%= @link.user.name %></small></h1>
 </div>
 
+<h1 style="color: #337ab7; text-decoration: none;"><%= @link.title %><br> <small>Submitted by <%= @link.user.name %></small></h1>
 <div class="btn-group">
   <p id="p1" style="display:none"><%=@link.url %></p>
-  <a title="Copy to Clipboard" onclick="copyToClipboard('#p1')"class="btn btn-primary" >
+  <a title="Copy to Clipboard" onclick="copyToClipboard('#p1')" class="btn btn-primary" >
     <%=@link.url %>
   </a>
 </div>
