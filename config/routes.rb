@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
       resources :links
+      # resources :application
+    end
+  end
+  namespace 'api' do
+    namespace 'v1' do
+      resources :users
+      # resources :application
     end
   end
   root to: "links#index"
