@@ -16,18 +16,18 @@
     <div class="navbar-inner">
       <div class="container">
         <div id="logo" class="navbar-brand"><%= link_to "Couponate", root_path %></div>
-        <nav class="collapse navbar-collapse navbar-ex1-collapse">
+        <nav class="">
         	<% if user_signed_in? -%>
 						<ul  style="display: block;" class="nav navbar-nav navbar-right">
-							<li><%= link_to 'Add Coupon', new_link_path %></li>
-							<li><%= link_to 'Account', edit_user_registration_path %></li>
-							<li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-							<li><a href="chat">Problem?</a></li>
+							<li class="nav-item"><%= link_to 'Add Coupon', new_link_path %></li>
+							<li class="nav-item"><%= link_to 'Account', edit_user_registration_path %></li>
+							<li class="nav-item"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+							<li class="nav-item"><a href="chat">Problem?</a></li>
 						</ul>
 					<% else -%>
 						<ul style="display: block;" class="nav navbar-nav pull-right">
-							<li><%= link_to 'Sign up', new_user_registration_path %></li>
-							<li><%= link_to 'Sign in', new_user_session_path %></li>
+							<li class="nav-item"><%= link_to 'Sign up', new_user_registration_path %></li>
+							<li class="nav-item"><%= link_to 'Sign in', new_user_session_path %></li>
 						</ul>
 					<% end -%>
         </nav>
