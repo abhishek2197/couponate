@@ -41,7 +41,7 @@ module Api
 
       private
         def link_params
-          params.permit(:title, :url, :user_id)
+          params.permit(:title, :url, :visible)
         end
 
     end
