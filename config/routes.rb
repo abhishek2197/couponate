@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :comments
-
+  get 'chat' => 'links#chat', as: :chat
   devise_for :users
   resources :links do
     member do
