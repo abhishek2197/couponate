@@ -31,9 +31,9 @@ function copyToClipboard(element) {
     <%= @link.get_downvotes.size %>
   <% end %>
 </div>
-
+<br>
 <% if @link.user == current_user -%>
-	<div class="btn-group">
+	<div class="btn-group pull-right">
 		<%= link_to 'Edit', edit_link_path(@link), class: "btn btn-default" %>
 		<%= link_to 'Destroy', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
 	</div>
