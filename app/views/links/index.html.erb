@@ -43,6 +43,11 @@
       </div>
     </div>
     <% end %>
+  <% else %>
+  <script>
+    window.location.href = "<%= request.original_url + "users/sign_in" %>";
+  </script>
+
   <% end %>
 <% end %>
 <br><br>
