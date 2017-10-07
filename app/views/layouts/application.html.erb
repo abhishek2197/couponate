@@ -16,23 +16,29 @@
     <div class="navbar-inner">
       <div class="container">
         <div id="logo" class="navbar-brand"><%= link_to "Couponate", root_path %></div>
-        <nav class="">
+        <nav class="pull-right nav">
+
+
         	<% if user_signed_in? -%>
-						<ul  style="display: block;" class="nav navbar-nav navbar-right">
-							<li class="nav-item"><%= link_to 'Add Coupon', new_link_path %></li>
-							<li class="nav-item"><%= link_to 'Account', edit_user_registration_path %></li>
-							<li class="nav-item"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-							<li class="nav-item"><a href="chat">Problem?</a></li>
-						</ul>
+						<li class="dropdown" style="display: block;" class="nav navbar-nav navbar-right">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Settings</a>
+              <div class="dropdown-menu">
+              <%= link_to 'Add Coupon', new_link_path , :class =>  "dropdown-item nav-item"%>
+							<%= link_to 'Account', edit_user_registration_path , :class => "dropdown-item" %>
+							<%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "dropdown-item" %>
+							<a class="dropdown-item" href="chat">Problem?</a>
+            </div>
+						</li>
 					<% else -%>
-						<ul style="display: block;" class="nav navbar-nav pull-right">
-							<li class="nav-item"><%= link_to 'Sign up', new_user_registration_path %></li>
-							<li class="nav-item"><%= link_to 'Sign in', new_user_session_path %></li>
-						</ul>
+          <li class="dropdown" style="display: block;" class="nav navbar-nav navbar-right">
+          	<li class="dropdown-item" class="nav-item"><%= link_to 'Sign up', new_user_registration_path %></li>
+							<li class="dropdown-item" class="nav-item"><%= link_to 'Sign in', new_user_session_path %></li>
+            </li>
+
 					<% end -%>
         </nav>
       </div>
-    </div>
+      </div>
   </header>
 
 	<div id="main_content" class="container">
