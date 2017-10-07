@@ -26,7 +26,7 @@
               <%= link_to 'Add Coupon', new_link_path , :class =>  "dropdown-item nav-item"%>
 							<%= link_to 'Account', edit_user_registration_path , :class => "dropdown-item" %>
 							<%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => "dropdown-item" %>
-							<a class="dropdown-item" href="chat">Problem?</a>
+							<a class="dropdown-item" href="<%= root_path + "chat" %>">Problem?</a>
             </div>
 						</li>
 					<% else -%>
